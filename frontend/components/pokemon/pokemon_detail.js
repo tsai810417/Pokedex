@@ -5,8 +5,8 @@ class PokemonDetail extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.requestSinglePokemon(this.props.match.params.pokemonId);
+  componentWillMount() {
+    setTimeout(() => this.props.requestSinglePokemon(this.props.match.params.pokemonId), 200);
   }
 
   componentDidUpdate(prevProps) {
@@ -18,10 +18,10 @@ class PokemonDetail extends React.Component {
   render() {
     const poke = this.props.pokemon;
 
-    if (!poke.poke_type) {
+    if (!poke || !poke.moves) {
       return null;
     }
-
+    console.log(this.props.items);
     return(
       <div>
         <img src={ poke.image_url } alt={ poke.name } />
@@ -32,6 +32,7 @@ class PokemonDetail extends React.Component {
           <li>Defense: { poke.defense }</li>
           <li>Moves: { poke.moves.join(', ')}</li>
         </ul>
+
       </div>
     )
   }
