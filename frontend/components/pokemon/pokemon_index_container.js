@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
   pokemon: selectAllPokemon(state)
 });
 
-const mapDispatchToProps = diapatch => ({
+const mapDispatchToProps = dispatch => ({
   requestAllPokemon: () => dispatch(requestAllPokemon())
 });
 
