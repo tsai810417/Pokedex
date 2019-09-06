@@ -1,11 +1,12 @@
 import React from 'react';
+import Item from '../items/item';
 
 class PokemonDetail extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     setTimeout(() => this.props.requestSinglePokemon(this.props.match.params.pokemonId), 200);
   }
 
@@ -21,7 +22,7 @@ class PokemonDetail extends React.Component {
     if (!poke || !poke.moves) {
       return null;
     }
-    console.log(this.props.items);
+
     return(
       <div>
         <img src={ poke.image_url } alt={ poke.name } />
@@ -32,7 +33,9 @@ class PokemonDetail extends React.Component {
           <li>Defense: { poke.defense }</li>
           <li>Moves: { poke.moves.join(', ')}</li>
         </ul>
-
+        <ul>
+          {this.props.items.map( i => <Item item={ i } key={ i.id }/>)}
+        </ul>
       </div>
     )
   }
