@@ -16,9 +16,9 @@ class PokemonIndex extends React.Component {
     ))
     return(
       <section>
-        <ul>
+        <ol>
           { pokemonItem }
-        </ul>
+        </ol>
       </section>
     )
   }
