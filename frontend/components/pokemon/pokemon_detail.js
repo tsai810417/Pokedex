@@ -7,7 +7,7 @@ class PokemonDetail extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.props.requestSinglePokemon(this.props.match.params.pokemonId), 200);
+    setTimeout(() => this.props.requestSinglePokemon(this.props.match.params.pokemonId), 500);
   }
 
   componentDidUpdate(prevProps) {
