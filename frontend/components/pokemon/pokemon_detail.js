@@ -1,5 +1,7 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import Item from '../items/item';
+import ItemDetailContainer from '../items/item_detail_container';
 
 class PokemonDetail extends React.Component {
   constructor(props) {
@@ -36,6 +38,7 @@ class PokemonDetail extends React.Component {
         <ul>
           {this.props.items.map( i => <Item item={ i } key={ i.id }/>)}
         </ul>
+        <Route path='/pokemon/:pokemonId/item/:itemId' component={ ItemDetailContainer } />
       </div>
     )
   }
