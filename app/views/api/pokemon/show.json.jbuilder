@@ -8,5 +8,6 @@ json.set! "items" do
       json.extract! i, :id, :name, :pokemon_id, :price, :happiness
       json.image_url image_url(i.image_url)
     end
+    p image_url(i.image_url)
   end
 end
