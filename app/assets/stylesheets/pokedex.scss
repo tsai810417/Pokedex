@@ -2,8 +2,10 @@
 
 #pokedex {
   display: flex;
-  width: 100%;
+  width: 80%;
   height: calc(100vh - 83px);
+  margin: auto;
+  justify-content: space-around;
 
   ul, ol {
     list-style: none;
@@ -39,14 +41,14 @@
   }
 
   #pokemon-index {
-    width: 28%;
+    width: 25%;
     height: 100%;
     overflow: scroll;
   }
 
   #detail-container {
     margin: 10px;
-    width: 68%;
+    width: 50%;
     margin: auto;
     padding: 20px;
     background: #e1e3e6;
@@ -59,7 +61,7 @@
       justify-content: center;
 
       img {
-        height: 30vh;
+        height: 25vh;
       }
     }
 
