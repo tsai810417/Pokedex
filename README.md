@@ -9,7 +9,7 @@ You will need Rails 5.1.2 and Postgres installed on your machine. Before start r
 ```terminal
 $ git clone https://github.com/tsai810417/Pokedex.git
 
-$ cd FreshCards
+$ cd pokedex
 
 $ npm install
 
