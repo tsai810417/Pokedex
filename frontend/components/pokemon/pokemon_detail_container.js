@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => {
   const items = selectPokemonItems(state, ownProps.match.params.pokemonId);
   return {
     pokemon,
-    items
+    items,
+    loading: state.entities.ui.loading
   };
 };
 

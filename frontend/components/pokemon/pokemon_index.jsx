@@ -14,6 +14,14 @@ class PokemonIndex extends React.Component {
   }
 
   render() {
+    if (this.props.loading.allPokemon) {
+      return (
+        <div id="loading-pokeball-container">
+          <div id="loading-pokeball"></div>
+        </div>
+      )
+    }
+
     return(
       <div id='pokedex'>
         <section id='pokemon-index'>

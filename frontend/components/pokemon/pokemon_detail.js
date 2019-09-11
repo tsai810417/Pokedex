@@ -25,6 +25,14 @@ class PokemonDetail extends React.Component {
       return null;
     }
 
+    if (this.props.loading.singlePokemon) {
+      return (
+        <div id="loading-pokeball-container">
+          <div id="loading-pokeball"></div>
+        </div>
+      )
+    }
+
     return(
       <div id='detail-container' className='rounded-container'>
         <figure className='rounded-container'>
