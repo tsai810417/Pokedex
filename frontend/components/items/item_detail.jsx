@@ -8,8 +8,8 @@ class ItemDetail extends React.Component {
   render() {
     const item = this.props.item;
     return(
-      <section>
-        <h3>{item.name}</h3>
+      <section id='item-detail-container'>
+        <h4>{item.name}</h4>
         <ul>
           <li>Happiness: {item.happiness}</li>
           <li>Price: ${item.price}</li>

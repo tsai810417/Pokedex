@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Item = ({ item }) => (
   <li>
     <Link to={`/pokemon/${item.pokemon_id}/item/${item.id}`}>
-      <img src={ item.image_url } alt={ item.name } style={{ width: '50px', height: '50px' }}/>
+      <img src={ item.image_url } alt={ item.name }/>
     </Link>
   </li>
 );

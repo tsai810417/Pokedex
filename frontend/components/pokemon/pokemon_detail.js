@@ -26,8 +26,10 @@ class PokemonDetail extends React.Component {
     }
 
     return(
-      <div>
-        <img src={ poke.image_url } alt={ poke.name } />
+      <div id='detail-container' className='rounded-container'>
+        <figure className='rounded-container'>
+          <img src={ poke.image_url } alt={ poke.name } />
+        </figure>
         <h3>{ poke.name }</h3>
         <ul>
           <li>Type: { poke.poke_type }</li>
@@ -35,10 +37,13 @@ class PokemonDetail extends React.Component {
           <li>Defense: { poke.defense }</li>
           <li>Moves: { poke.moves.join(', ')}</li>
         </ul>
-        <ul>
-          {this.props.items.map( i => <Item item={ i } key={ i.id }/>)}
-        </ul>
-        <Route path='/pokemon/:pokemonId/item/:itemId' component={ ItemDetailContainer } />
+        <section id='items-container' className='rounded-container'>
+          <h3>Items</h3>
+          <ul id='item-icon-list' className='rounded-container'>
+            {this.props.items.map( i => <Item item={ i } key={ i.id }/>)}
+          </ul>
+          <Route path='/pokemon/:pokemonId/item/:itemId' component={ ItemDetailContainer } />
+        </section>
       </div>
     )
   }

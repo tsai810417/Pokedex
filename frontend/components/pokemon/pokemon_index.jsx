@@ -15,15 +15,15 @@ class PokemonIndex extends React.Component {
 
   render() {
     return(
-      <div>
-        <section>
-          <Route path='/pokemon/:pokemonId' component={ PokemonDetailContainer } />
-          <ol>
+      <div id='pokedex'>
+        <section id='pokemon-index'>
+          <ol id='index-list'>
             {
               this.props.pokemon.map(p => <PokemonIndexItem key={ p.id } pokemon={ p } />)
             }
           </ol>
         </section>
+        <Route path='/pokemon/:pokemonId' component={ PokemonDetailContainer } />
       </div>
     )
   }

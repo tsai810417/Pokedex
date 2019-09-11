@@ -1,0 +1,119 @@
+@import "variables";
+
+#pokedex {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 83px);
+
+  ul, ol {
+    list-style: none;
+    padding-inline-start: 0px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  #index-list {
+    font-size: 15px;
+
+    li {
+      padding: 5px;
+
+      img {
+        vertical-align: middle;
+      }
+
+      span {
+        margin: 0px 5px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    a :hover {
+      background: grey;
+      cursor: pointer;
+    }
+  }
+
+  #pokemon-index {
+    width: 28%;
+    height: 100%;
+    overflow: scroll;
+  }
+
+  #detail-container {
+    margin: 10px;
+    width: 68%;
+    margin: auto;
+    padding: 20px;
+    background: #e1e3e6;
+
+    figure {
+      margin: 0px;
+      background-image: linear-gradient(red, yellow);
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+
+      img {
+        height: 30vh;
+      }
+    }
+
+    h3 {
+      margin: 0px;
+    }
+
+    li, h3 {
+      text-align: center;
+    }
+
+    #items-container {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+      background-color:#F6F6F6;
+      background-image:
+        radial-gradient(circle at 100% 150%, #F6F6F6 24%, white 25%, white 28%, #F6F6F6 29%, #F6F6F6 36%, white 36%, white 40%, transparent 40%, transparent),
+        radial-gradient(circle at 0    150%, #F6F6F6 24%, white 25%, white 28%, #F6F6F6 29%, #F6F6F6 36%, white 36%, white 40%, transparent 40%, transparent),
+        radial-gradient(circle at 50%  100%, white 10%, #F6F6F6 11%, #F6F6F6 23%, white 24%, white 30%, #F6F6F6 31%, #F6F6F6 43%, white 44%, white 50%, #F6F6F6 51%, #F6F6F6 63%, white 64%, white 71%, transparent 71%, transparent),
+        radial-gradient(circle at 100% 50%, white 5%, #F6F6F6 6%, #F6F6F6 15%, white 16%, white 20%, #F6F6F6 21%, #F6F6F6 30%, white 31%, white 35%, #F6F6F6 36%, #F6F6F6 45%, white 46%, white 49%, transparent 50%, transparent),
+        radial-gradient(circle at 0    50%, white 5%, #F6F6F6 6%, #F6F6F6 15%, white 16%, white 20%, #F6F6F6 21%, #F6F6F6 30%, white 31%, white 35%, #F6F6F6 36%, #F6F6F6 45%, white 46%, white 49%, transparent 50%, transparent);
+
+      #item-icon-list {
+        display: flex;
+        align-self: center;
+        background: #FFFFFF;
+
+        img {
+          width: 60px;
+          height: 60px;
+          margin: 0px 5px;
+        }
+      }
+
+      #item-detail-container {
+        h4 {
+          text-align: center;
+          margin: 0px 0px 12px 0px;
+          font-size: 18px;
+          color: #000000;
+        }
+
+        ul {
+          margin: 0px 5px;
+        }
+      }
+    }
+  }
+
+  .rounded-container {
+    border: 3px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+  }
+}
